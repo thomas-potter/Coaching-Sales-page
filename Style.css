@@ -1,10 +1,11 @@
 :root {
     --heading-col: #FFFFFF;
     --text-col: #ffffff;
-    --hover-col: #C72E2E;
+    --hover-col: #ff3535;
+    --heading-red: #ff3535;
 
     --button-col: #ffffff;
-    --button-col2: #C72E2E;
+    --button-col2: #ff3535;
     --hover-button-col:  #000000;
     --hover-text-col: #000000;
 
@@ -14,6 +15,8 @@
 
     --accent: #D2D2D2;
     --contrast-accent: #8E8E8E;
+
+    --side-padding: 20vh;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -24,62 +27,30 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     background: var(--background-col);
+    color: var(--text-col);
 }
 
-nav {
-    justify-content: space-around;
-    align-items: center;
-    height: 5vh;
-    background: var(--background-col);
-}
-
-.navdiv {
-    display: flex;
-    padding-right: 10vh;
-    padding-left: 10vh;
-    padding-top: 4vh;
-    font-size: 1.3rem;
-    font-weight: 700;
-    font-style: normal;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo a {
-    display: flex;
-    align-items: center;
+h2 {
     text-align: center;
-    color: var(--heading-col);
+    font-size: 1.5rem;
+    padding: 1.5vh;
+    font-weight: 600;
+    color: var(--text-col);
 }
 
-.logo-img {
-    width: 5vh; 
-    height: auto; 
-    padding-right: 2vh;
-}
-
-li {
-    list-style: none;
-    display: inline-block;
-}
-
-li a {
-    color: var(--heading-col);
-    margin-right: 3vh;
-    transition: color var(--col-transition-duration) ease;
-}
-
-li a:hover {
-    color: var(--hover-col);    
+h3 {
+    text-align: center;
+    font-size: 1rem;
+    padding: 20px;
+    font-weight: 400;
+    color: var(--text-col);
 }
 
 /* Container styling */
@@ -90,36 +61,36 @@ li a:hover {
     align-items: center;
     min-height: 100vh;
     background-color: var(--background-col);
+    text-align: center;
+    padding-right: var(--side-padding);
+    padding-left: var(--side-padding);
 }
 
-/* Left section styling */
-.left {
-    width: 100%;
-    text-align: left;
-    padding: 20px;
-    color: var(--text-col);
-}
-
-/* Right section styling */
-.right {
-    width: 100%;
-    text-align: left;
-    padding: 20px;
-    color: var(--text-col);
-}
-
-h1, h2 {
-    color: var(--heading-col);
+.booking-header {
+    text-align: center;
     margin-bottom: 20px;
+    padding-top: 7vh;
+    padding-bottom: 3vh;
+    color: var(--heading-col);
 }
 
-.description-text {
-    margin-bottom: 30px;
-    font-weight: 500;
-    font-size: 2vh;
+.booking-header h2 {
+    color: var(--heading-red);
 }
 
-/* Video container styling */
+
+.booking-header h1 {
+    font-size: 3rem;
+    padding-bottom: 2vh;
+    color: var(--heading-col);
+}
+
+/*VIDEO SECTION */
+.video {
+    width: 100%;
+    color: var(--text-col);
+}
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -127,6 +98,8 @@ h1, h2 {
     overflow: hidden;
     max-width: 100%;
     background: var(--background-col);
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Drop shadow */
 }
 
 .video-container iframe {
@@ -135,4 +108,161 @@ h1, h2 {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.btn {
+    padding-top: 3vh;
+}
+
+.bookbtn {
+    font-family: "Montserrat", sans-serif;
+    padding: 10px 60px;
+    margin-right: 10px;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: transform var(--col-transition-duration) ease, color var(--col-transition-duration) ease; /* Smooth transition for transform and color */
+    font-size: 2vh;
+    font-weight: 700;
+    border: 2px solid var(--button-col2);
+    background-color: var(--button-col2); /* Red background */
+    color: white; /* White text */
+}
+
+.bookbtn:hover {
+    transform: scale(1.05);
+    background-color: white; /* White background on hover */
+    color: var(--hover-text-col); /* Text color on hover */
+    border-color: white; /* Border color on hover */
+}
+
+/*INFO SECTION*/
+.info {
+    padding: 7vh;
+}
+
+.info h2 {
+    font-size: 1.8rem;
+    padding-bottom: 5vh;
+}
+
+.info .split {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.info .split .left {
+    text-align:left;
+    flex: 1;
+    padding-right: 10vh;
+}
+
+.info .split .left p,
+.info .split .left ul {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--text-col); /* Text color */
+}
+
+.info .split .left ul {
+    padding-left: 5vh;
+    padding-bottom: 3vh;
+}
+
+.info .split .left li,
+.info .split .left ul {
+    margin-bottom: 8px;
+}
+
+.info .split .left h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--heading-col); /* Heading color */
+}
+
+.info .split .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info .split .right img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*EMBED SECTION */
+.embed {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    color: var(--text-col);
+}
+
+.tidycal-embed {
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Drop shadow */
+}
+
+.last-push {
+    text-align: center;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+.last-push h2 {
+    font-size: 24px;
+    margin-bottom: 1.5vh;
+    color: var(--heading-col);
+}
+
+.last-push p{
+    padding-bottom: 3vh;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--text-col); /* Text color */
+
+}
+
+.last-push .buttons button{
+    font-family: "Montserrat", sans-serif;
+    padding: 10px 60px;
+    margin-right: 10px;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    font-size: 2vh;
+    font-weight: 700;
+}
+
+.btn-1 {
+    border: 2px solid var(--button-col2);
+    background-color: var(--button-col2); /* Fully colored with color variable */
+    color: white; /* White text */
+}
+
+.btn-1:hover {
+    transform: scale(1.05);
+    border-color: var(--button-col);
+    background-color: var(--button-col);
+    color: var(--hover-text-col);
+}
+
+.btn-2 {
+    border: 2px solid var(--button-col);
+    background-color: var(--background-col); /* See-through background with background color variable */
+    color: var(--text-col); /* Text color */
+}
+
+.btn-2:hover {
+    transform: scale(1.05);
+    background-color: var(--button-col); /* Color on hover */
+    color: var(--hover-text-col);
 }
