@@ -156,7 +156,7 @@ h3 {
 .info .split .left {
     text-align:left;
     flex: 1;
-    padding-right: 10vh;
+    padding-right: 5vh;
 }
 
 .info .split .left p,
