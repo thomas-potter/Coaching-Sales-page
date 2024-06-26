@@ -1,15 +1,18 @@
 :root {
-    --heading-col: #FFFFFF;
+    --heading-col: #ffffff;
     --text-col: #ffffff;
-    --hover-col: #ff3535;
-    --heading-red: #ff3535;
+    --text-highlight: #00b8f571;
+    --heading-red: #a8efff;
 
-    --button-col: #ffffff;
-    --button-col2: #ff3535;
-    --hover-button-col:  #000000;
+    --button-col: #000000;
+    --button-col2: #00a3f5;
+    --hover-button-col: #000000;
+    --hover-button-col2:  #000000;
     --hover-text-col: #000000;
+    --hover-text-col2: #000000;
 
-    --background-col: #101010;
+    --background-col: #111111;
+    --background-col2: #0093b4;
 
     --col-transition-duration: 0.3s;
 
@@ -19,7 +22,7 @@
     --side-padding: 15%;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
@@ -32,14 +35,14 @@ html {
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Poppins", sans-serif;
     background: var(--background-col);
     color: var(--text-col);
 }
 
 h2 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 1.5vh;
     font-weight: 600;
     color: var(--text-col);
@@ -47,9 +50,9 @@ h2 {
 
 h3 {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 20px;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--text-col);
 }
 
@@ -60,8 +63,13 @@ h3 {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--background-col);
     text-align: center;
+    padding-right: var(--side-padding);
+    padding-left: var(--side-padding);
+}
+
+.header {
+    background: var(--background-col);
     padding-right: var(--side-padding);
     padding-left: var(--side-padding);
 }
@@ -74,16 +82,25 @@ h3 {
     color: var(--heading-col);
 }
 
-.booking-header h2 {
-    color: var(--heading-red);
-}
-
-
 .booking-header h1 {
     font-size: 3rem;
-    padding-bottom: 2vh;
+    padding-bottom: 1vh;
+    font-weight: 900;
+}
+
+.Text-Gradient {
+    padding: 0.1vh 1vh;
+    background: linear-gradient(75deg, #2cb2ff, #00ff6e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.booking-header h2 {
     color: var(--heading-col);
 }
+
+
 
 /*VIDEO SECTION */
 .video {
@@ -97,7 +114,6 @@ h3 {
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    background: var(--background-col);
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Drop shadow */
 }
@@ -112,10 +128,11 @@ h3 {
 
 .btn {
     padding-top: 3vh;
+    text-align: center;
+    padding-bottom: 3vh;
 }
 
 .bookbtn {
-    font-family: "Montserrat", sans-serif;
     padding: 10px 60px;
     margin-right: 10px;
     border-radius: 2rem;
@@ -124,7 +141,7 @@ h3 {
     font-size: 2vh;
     font-weight: 700;
     border: 2px solid var(--button-col2);
-    background-color: var(--button-col2); /* Red background */
+    background-color: var(--button-col2);
     color: white; /* White text */
 }
 
@@ -138,11 +155,6 @@ h3 {
 /*INFO SECTION*/
 .info {
     padding: 7vh;
-}
-
-.info h2 {
-    font-size: 1.8rem;
-    padding-bottom: 5vh;
 }
 
 .info .split {
@@ -224,7 +236,6 @@ h3 {
 .embed {
     width: 100%;
     text-align: left;
-    padding: 10px;
     color: var(--text-col);
 }
 
@@ -255,7 +266,6 @@ h3 {
 }
 
 .last-push .buttons button{
-    font-family: "Montserrat", sans-serif;
     padding: 10px 60px;
     margin: 1vh;
     border-radius: 2rem;
