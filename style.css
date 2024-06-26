@@ -4,7 +4,7 @@
     --text-highlight: #00b8f571;
     --heading-red: #a8efff;
 
-    --button-col: #000000;
+    --button-col: #ffffff;
     --button-col2: #00a3f5;
     --hover-button-col: #000000;
     --hover-button-col2:  #000000;
@@ -90,11 +90,21 @@ h3 {
 
 .Text-Gradient {
     padding: 0.1vh 1vh;
-    background: linear-gradient(75deg, #2cb2ff, #00ff6e);
+    background: linear-gradient(75deg, #ff562c, #ff008c); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
+
+/*
+.Text-Gradient {
+    padding: 0vh 3vh;
+    background: linear-gradient(120deg, #2cb2ff, #00ff6e);
+    border-radius: 0.5rem;
+}
+*/
+
 
 .booking-header h2 {
     color: var(--heading-col);
@@ -140,16 +150,15 @@ h3 {
     transition: transform var(--col-transition-duration) ease, color var(--col-transition-duration) ease; /* Smooth transition for transform and color */
     font-size: 2vh;
     font-weight: 700;
-    border: 2px solid var(--button-col2);
-    background-color: var(--button-col2);
+    border: 2px solid transparent;
+    background: linear-gradient(75deg, #ff562c, #ff008c); 
     color: white; /* White text */
 }
 
 .bookbtn:hover {
-    transform: scale(1.05);
+    transform: scale(1.15);
     background-color: white; /* White background on hover */
     color: var(--hover-text-col); /* Text color on hover */
-    border-color: white; /* Border color on hover */
 }
 
 /*INFO SECTION*/
@@ -276,15 +285,13 @@ h3 {
 }
 
 .btn-1 {
-    border: 2px solid var(--button-col2);
-    background-color: var(--button-col2); /* Fully colored with color variable */
+    border: 2px solid transparent;
+    background: linear-gradient(75deg, #ff562c, #ff008c); 
     color: white; /* White text */
 }
 
 .btn-1:hover {
-    transform: scale(1.05);
-    border-color: var(--button-col);
-    background-color: var(--button-col);
+    transform: scale(1.15);
     color: var(--hover-text-col);
 }
 
@@ -295,7 +302,7 @@ h3 {
 }
 
 .btn-2:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     background-color: var(--button-col); /* Color on hover */
     color: var(--hover-text-col);
 }
