@@ -16,7 +16,7 @@
     --accent: #D2D2D2;
     --contrast-accent: #8E8E8E;
 
-    --side-padding: 20vh;
+    --side-padding: 15%;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -197,6 +197,25 @@ h3 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 1300px) { /* You can adjust 768px to the width you want */
+    .info .split {
+        flex-direction: column;
+        align-items: stretch; /* Ensures children take full width */
+    }
+    
+    .info .split .left,
+    .info .split .right {
+        flex: none; /* Reset flex grow/shrink */
+        width: 100%; /* Make them full width */
+        padding-right: 0; /* Remove padding on the right */
+        padding-bottom: 20px; /* Add padding to the bottom for spacing */
+    }
+
+    .info .split .right {
+        justify-content: flex-start; /* Optional: Adjust alignment */
+    }
+}
+
 /*EMBED SECTION */
 .embed {
     width: 100%;
@@ -234,7 +253,7 @@ h3 {
 .last-push .buttons button{
     font-family: "Montserrat", sans-serif;
     padding: 10px 60px;
-    margin-right: 10px;
+    margin: 1vh;
     border-radius: 2rem;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
