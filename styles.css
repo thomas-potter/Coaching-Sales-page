@@ -1,0 +1,151 @@
+/* styles.css */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.subheading {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #000;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.text {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 1rem;
+  text-align: left;
+}
+
+.text p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.text strong {
+  color: #000; /* Bold black for emphasis */
+  font-weight: 600; /* Make it slightly bolder */
+}
+
+
+.image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.image img {
+  width: 100%; /* Make the image responsive */
+  height: 300px; /* Set a fixed height for cropping */
+  object-fit: cover; /* Crop the image to fit the container */
+  border-radius: 12px; /* Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+
+.booking {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.booking h2 {
+  font-size: 1.5rem;
+  color: #f30000;
+  margin-bottom: 1rem;
+}
+
+.booking p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tidycal-embed {
+  width: 100%;
+}
+
+
+/* Contact section */
+.contact {
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #f30000;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #d00000; /* Darker red on hover */
+}
+
+.email-text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.email-text strong {
+  color: #000; /* Bold black for emphasis */
+  font-weight: 600;
+  word-break: break-word; /* Ensures long email addresses wrap properly */
+}
+
+
+.footer {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 2rem;
+}
